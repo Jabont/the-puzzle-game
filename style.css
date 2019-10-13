@@ -1,0 +1,137 @@
+body{
+	background: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 97.5vh;
+	--bd:#fff6;
+}
+body:after{
+	content: " ";
+	background-image: url(pic.jpg);
+	background-position: center;
+	filter: blur(2rem);
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -100;
+	background-size: cover;
+	opacity: .5;
+}
+.title {
+	font-family: sans-serif;
+	text-align: center;
+	color: #fff;
+}
+#heading{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#gamezone {
+	background-image: none;
+	background-position: center;
+	background-size: cover;
+	width: 500px;
+	background-color: #111;
+	margin: 20px auto;
+	height: 500px;
+	position: relative;
+	box-shadow: -2px -2px 0px #ffff, 2px 2px 0px #ffff, 2px -2px 0px #ffff,-2px 2px 0px #ffff;;
+}
+.demo{
+	background-image: url(pic.jpg);
+	background-position: center;
+	background-size: cover;
+	width: 160px;
+	height: 160px;
+	margin-right: 1em;
+}
+/*-- Mobile Version --*/
+@media (max-width: 768px) {
+	#gamezone{
+		zoom:.6;
+	}
+}
+a{
+	color: #fffc;
+}
+.minibox{
+	width: 100px;
+	height: 100px;
+	background: yellow;
+	/*ทำให้ใช้ top และ left ได้*/
+	position: absolute;
+	/*ทำให้มองเห็นตอนขยับ*/
+	transition: all .15s;
+	border-right: 1px solid var(--bd);
+	border-bottom: 1px solid var(--bd);
+	box-sizing: border-box;
+	background: url(pic.jpg);
+	background-size: 500%;
+
+}
+.minibox[y="0"]{
+	top:0;
+}
+.minibox[y="1"]{
+	top:100px;
+}
+.minibox[y="2"]{
+	top:200px;
+}
+.minibox[y="3"]{
+	top:300px;
+}
+.minibox[y="4"]{
+	top:400px;
+}
+
+.minibox[x="0"]{
+	left:0;
+}
+.minibox[x="1"]{
+	left:100px;
+}
+.minibox[x="2"]{
+	left:200px;
+}
+.minibox[x="3"]{
+	left:300px;
+}
+.minibox[x="4"]{
+	left:400px;
+}
+
+.box-y-0{
+	background-position-y :0%;
+}
+.box-y-1{
+	background-position-y :25%;
+}
+.box-y-2{
+	background-position-y :50%;
+}
+.box-y-3{
+	background-position-y :75%;
+}
+.box-y-4{
+	background-position-y :100%;
+}
+.box-x-0{
+	background-position-x :0%;
+}
+.box-x-1{
+	background-position-x :25%;
+}
+.box-x-2{
+	background-position-x :50%;
+}
+.box-x-3{
+	background-position-x :75%;
+}
+.box-x-4{
+	background-position-x :100%;
+}
